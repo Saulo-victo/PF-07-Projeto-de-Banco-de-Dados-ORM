@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
 
 # CRIAÇÃO E ESTABELECIMENTO DA CONEXÃO E DA SESSÃO
-DATABASEURL = "postgresql+psycopg2://postgres:adm123@localhost:5432/GerenciadorDeAlunos"
+DATABASEURL = "postgresql+psycopg2://postgres:<SENHA>@localhost:5432/postgres"
 engine = create_engine(DATABASEURL, echo=False)
 
 r = engine.connect().execute(text("SELECT version();")).fetchone()
